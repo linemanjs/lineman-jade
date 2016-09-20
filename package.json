@@ -1,39 +1,38 @@
 {
-  "name": "lineman-jade",
-  "title": "Jade plugin for Lineman, using grunt-contrib-jade",
-  "description": "Provide Jade functionality to your Lineman application.",
+  "name": "lineman-pug",
+  "title": "Pug plugin for Lineman, using grunt-contrib-pug",
+  "description": "Provide Pug functionality to your Lineman application.",
   "keywords": [
     "lineman",
     "grunt",
-    "jade"
+    "jade",
+    "pug"
   ],
   "version": "0.1.2",
-  "homepage": "https://github.com/aranasoft/lineman-jade",
-  "author": "Arana Software <info@aranasoft.com> (http://www.aranasoft.com)",
+  "homepage": "https://github.com/linemanjs/lineman-pug",
+  "author": "Justin Searls <searls@gmail.com>",
   "contributors": [
-    "Jay Harris <jay@aranasoft.com>"
+    "Jay Harris <jay@aranasoft.com>",
+    "Arana Software <info@aranasoft.com> (http://www.aranasoft.com)"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/aranasoft/lineman-jade.git"
+    "url": "git://github.com/linemanjs/lineman-pug.git"
   },
   "bugs": {
-    "url": "https://github.com/aranasoft/lineman-jade/issues"
+    "url": "https://github.com/linemanjs/lineman-pug/issues"
   },
   "main": "main.js",
   "dependencies": {
-    "grunt-contrib-jade": "~0.9.1"
+    "grunt-contrib-pug": "^1.0.0"
   },
   "devDependencies": {
     "coffee-script": "~1.6.3"
   },
-  "peerDependencies": {
-    "lineman": ">= 0.23.1"
-  },
   "licenses": [
     {
       "type": "BSD",
-      "url": "http://github.com/aranasoft/lineman-jade/raw/master/LICENSE-BSD"
+      "url": "http://github.com/linemanjs/lineman-pug/raw/master/LICENSE-BSD"
     }
   ]
 }

@@ -1,30 +1,30 @@
 module.exports = (lineman) ->
   files:
-    jade:
-      templates: "app/templates/**/*.jade"
-      generatedTemplate: "generated/template/jade.js"
-      pages: "**/*.jade"
+    pug:
+      templates: "app/templates/**/*.pug"
+      generatedTemplate: "generated/template/pug.js"
+      pages: "**/*.pug"
       pageRoot: "app/pages/"
     template:
-      jade: "app/templates/**/*.jade"
-      generatedJade: "generated/template/jade.js"
+      pug: "app/templates/**/*.pug"
+      generatedPug: "generated/template/pug.js"
     pages:
-      source: lineman.config.files.pages.source.concat("!<%= files.jade.pageRoot %>/<%= files.jade.pages %>")
+      source: lineman.config.files.pages.source.concat("!<%= files.pug.pageRoot %>/<%= files.pug.pages %>")
 
   config:
-    loadNpmTasks: lineman.config.application.loadNpmTasks.concat('grunt-contrib-jade')
+    loadNpmTasks: lineman.config.application.loadNpmTasks.concat('grunt-contrib-pug')
 
     prependTasks:
-      common: ["jade:templates"].concat(lineman.config.application.prependTasks.common)
-      dev: lineman.config.application.prependTasks.common.concat("jade:pagesDev")
-      dist: lineman.config.application.prependTasks.common.concat("jade:pagesDist")
+      common: ["pug:templates"].concat(lineman.config.application.prependTasks.common)
+      dev: lineman.config.application.prependTasks.common.concat("pug:pagesDev")
+      dist: lineman.config.application.prependTasks.common.concat("pug:pagesDist")
 
-    jade:
+    pug:
       templates:
         options:
           client: true
         files:
-          "<%= files.jade.generatedTemplate %>": "<%= files.jade.templates %>"
+          "<%= files.pug.generatedTemplate %>": "<%= files.pug.templates %>"
       pagesDev:
         options:
           pretty: true
@@ -34,8 +34,8 @@ module.exports = (lineman) ->
             pkg: "<%= pkg %>"
         files: [{
           expand: true
-          src: "<%= files.jade.pages %>"
-          cwd: "<%= files.jade.pageRoot %>"
+          src: "<%= files.pug.pages %>"
+          cwd: "<%= files.pug.pageRoot %>"
           dest: "generated/"
           ext: ".html"
         }]
@@ -47,16 +47,16 @@ module.exports = (lineman) ->
             pkg: "<%= pkg %>"
         files: [{
           expand: true
-          src: "<%= files.jade.pages %>"
-          cwd: "<%= files.jade.pageRoot %>"
+          src: "<%= files.pug.pages %>"
+          cwd: "<%= files.pug.pageRoot %>"
           dest: "dist/"
           ext: ".html"
         }]
 
     watch:
-      jadePages:
-        files: ["<%= files.jade.pageRoot %><%= files.jade.pages %>", "<%= files.jade.templates %>"]
-        tasks: ["jade:pagesDev"]
-      jadeTemplates:
-        files: "<%= files.jade.templates %>"
-        tasks: ["jade:templates", "concat_sourcemap:js"]
+      pugPages:
+        files: ["<%= files.pug.pageRoot %><%= files.pug.pages %>", "<%= files.pug.templates %>"]
+        tasks: ["pug:pagesDev"]
+      pugTemplates:
+        files: "<%= files.pug.templates %>"
+        tasks: ["pug:templates", "concat_sourcemap:js"]
