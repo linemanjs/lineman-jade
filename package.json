@@ -10,6 +10,7 @@
   ],
   "version": "0.1.2",
   "homepage": "https://github.com/linemanjs/lineman-pug",
+  "license": "BSD-3-Clause",
   "author": "Justin Searls <searls@gmail.com>",
   "contributors": [
     "Jay Harris <jay@aranasoft.com>",
