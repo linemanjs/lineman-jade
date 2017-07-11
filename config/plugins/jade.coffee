@@ -16,8 +16,8 @@ module.exports = (lineman) ->
 
     prependTasks:
       common: ["pug:templates"].concat(lineman.config.application.prependTasks.common)
-      dev: lineman.config.application.prependTasks.common.concat("pug:pagesDev")
-      dist: lineman.config.application.prependTasks.common.concat("pug:pagesDist")
+      dev: lineman.config.application.prependTasks.dev.concat("pug:pagesDev")
+      dist: lineman.config.application.prependTasks.dist.concat("pug:pagesDist")
 
     pug:
       templates:
