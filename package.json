@@ -25,10 +25,7 @@
   },
   "main": "main.js",
   "dependencies": {
-    "grunt-contrib-pug": "^1.0.0"
-  },
-  "devDependencies": {
-    "coffee-script": "~1.6.3"
+    "grunt-contrib-pug": "^3.0.0"
   },
   "licenses": [
     {
