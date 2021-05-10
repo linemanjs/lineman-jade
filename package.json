@@ -8,7 +8,7 @@
     "jade",
     "pug"
   ],
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": "https://github.com/linemanjs/lineman-pug",
   "license": "BSD-3-Clause",
   "author": "Justin Searls <searls@gmail.com>",
